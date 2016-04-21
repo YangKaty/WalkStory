@@ -1,3 +1,49 @@
+#cover{
+    width:100%;
+    height: 100%;
+}
 h1{
     text-align:center;
+}
+button{
+  position:fixed;
+  right:600;
+  left:600;
+}
+.loginInput{
+position:fixed;
+right:600;
+left:600;
+}
+#title{
+  position:fixed;
+left:600;
+right:600;
+}
+
+#box-frame{
+    background-color: lightgrey;
+    width: 300px;
+    padding: 25px;
+    border: 25px solid navy;
+    margin: 25px;
+    text-align:center;
+}
+#box-frame-2{
+    background-color: lightgrey;
+    width: 300px;
+    padding: 25px;
+    border: 25px solid navy;
+    margin: 25px;
+    text-align:center;
+    margin-left:945px;
+}
+.contain{
+    position:absolute;
+    margin:auto;
+    bottom:10;
+    width:500px;
+    height:100px;
+    background-color:blue;
+    
 }
