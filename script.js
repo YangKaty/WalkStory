@@ -21,7 +21,9 @@ $(document).ready(function(){
     
     function showDialog (i){
         $("#dialogs").empty();
+        for(j = 0; j < dialogs.length; j++){
         $("#dialogs").append(dialogs[i]);
+        }
     }
     $("#contain").click(function(){
         showDialog(currentDialog)
@@ -29,10 +31,3 @@ $(document).ready(function(){
     });
     
 })
-
-  var highz = 0;
- 
-  window.addEventListener('devicemotion', function(eventData) {
-    document.getElementById("doEvent").innerHTML = JSON.stringify(eventData);
-  }
-    
