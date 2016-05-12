@@ -3,7 +3,7 @@
     height: 100%;
 }
 h1{
-    text-align:center;
+    text-align:justify;
 }
 button{
   position:fixed;
@@ -21,29 +21,39 @@ left:600;
 right:600;
 }
 
+.boxes{
+    background-color: lightgrey;
+    width: 300px;
+    padding: 25px;
+    border: 25px solid navy;
+    margin: 25px;
+    text-align:center;
+    
+}
 #box-frame{
+    margin-left:100px;
     background-color: lightgrey;
     width: 300px;
     padding: 25px;
     border: 25px solid navy;
     margin: 25px;
     text-align:center;
-}
+    }
 #box-frame-2{
+    margin-left:500px;
     background-color: lightgrey;
     width: 300px;
     padding: 25px;
     border: 25px solid navy;
     margin: 25px;
     text-align:center;
-    margin-left:945px;
-}
+    }
 .contain{
     position:absolute;
-    margin:auto;
+    margin:0% 25%;
     bottom:10;
-    width:500px;
-    height:100px;
-    background-color:blue;
+    width:50%;
+    height:25%;
+    background-color:green;
     
 }
