@@ -1,13 +1,17 @@
-
+    var steps = 0;
+    var lastZ;
 function handleMotionEvent(event) {
-
-    var x = Math.floor(event.accelerationIncludingGravity.x);
-    var y = Math.floor(event.accelerationIncludingGravity.y);
-    var z = Math.floor(event.accelerationIncludingGravity.z);
     
-    // Do something awesome.
-    //if x, y, or z changes in value (not too small of a change) then count it as a step
-    $("#deviceMotion").text(x + " " + y + " " + z);    
+    var z = event.accelerationIncludingGravity.z;
+
+    //if z changes in value (not too small of a change) from a positive to negative then count it as a step
+    
+    if((lastZ > 0 && z < 0) && (lastZ - z > 0.25)) {
+        steps++;
+    }
+    lastZ = z;
+    $("#accel").text(z);    
+    $("#steps").text(steps);
 }
 window.addEventListener('devicemotion', handleMotionEvent, true);
 
@@ -18,16 +22,16 @@ $(document).ready(function(){
                     "test 4"
         ];
     var currentDialog = 0;
-    
-    function showDialog (i){
-        $("#dialogs").empty();
-        for(j = 0; j < dialogs.length; j++){
-        $("#dialogs").append(dialogs[i]);
+    $(".contain").click(function(){
+        $("#dia").empty();
+        if(currentDialog == dialogs.length){
+            $("#dia").append("End");
+        } else {
+            $("#dia").append(dialogs[currentDialog]);
+            currentDialog++;
         }
-    }
-    $("#contain").click(function(){
-        showDialog(currentDialog)
-        currentDialog++;
-    });
+        
+    })
+    
     
 })

@@ -40,6 +40,8 @@ right:600;
     text-align:center;
     }
 #box-frame-2{
+    
+    float: right;
     margin-left:500px;
     background-color: lightgrey;
     width: 300px;
@@ -55,5 +57,19 @@ right:600;
     width:50%;
     height:25%;
     background-color:green;
+    
+}
+
+#dia{
+    margin: 10% 15%;
+     height:100px;
+    
+}
+#background{
+margin:10px;
+    width:100%;
+    height:100%;
+    background-image: url("http://www.capespiritwallpapers.com/The%20City%20of%20Cape%20Town%20seen%20from%20Signal%20Hill.jpg");
+    background-size: 100%, 100%;
     
 }
