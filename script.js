@@ -16,10 +16,11 @@ function handleMotionEvent(event) {
 window.addEventListener('devicemotion', handleMotionEvent, true);
 
 $(document).ready(function(){
-    var dialogs = ["test 1",
-                    "test 2",
-                    "test 3",
-                    "test 4"
+    var dialogs = ["i HATE YOU",
+                    "BUT I LOVE YOU",
+                    "BUT I HATE YOU",
+                    "AND I LOVE YOU",
+                    "BAKA",
         ];
     var currentDialog = 0;
     $(".contain").click(function(){
