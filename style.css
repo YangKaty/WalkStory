@@ -16,9 +16,11 @@ right:600;
 left:600;
 }
 #title{
-  position:fixed;
-left:600;
-right:600;
+  position:absolute;
+  margin-left:50%;
+ text-align: center;
+  margin-right:50%;
+    
 }
 
 .boxes{
@@ -33,45 +35,70 @@ right:600;
 #box-frame{
     float:left;
     display:inline-block;
-    margin-left:100px;
     background-color: lightgrey;
-    width: 300px;
+    width: 150px;
     padding: 25px;
-    border: 25px solid navy;
+    border: 25px solid gray;
     margin: 25px;
     text-align:center;
+    margin-top:15px;
+    border-radius: 25px;
     }
 #box-frame-2{
     float:right;
     display:inline-block;
     margin-left:500px;
     background-color: lightgrey;
-    width: 300px;
+    width: 150px;
     padding: 25px;
-    border: 25px solid navy;
+    border: 25px solid gray;
+    border-radius: 25px;
     margin: 25px;
     text-align:center;
+    margin-top:15px;
+    z-index: 0;
     }
 .contain{
     position:absolute;
-    margin:0% 25%;
-    bottom:10;
-    width:50%;
-    height:25%;
-    background-color:green;
+    margin:0% 15%;
+    bottom:10px;
+    width:70%;
+    height:15%;
+    background-color:orange;
+        border-radius: 25px;
+
     
 }
 
-#dia{
+#dialog{
+    position:absolute;
     margin: 5% 10%;
-     height:100px;
-    
+    height:100px;
+    font-size:24px; 
+
+
 }
 #background{
-margin:10px;
     width:100%;
     height:100%;
-    background-image: url("http://www.capespiritwallpapers.com/The%20City%20of%20Cape%20Town%20seen%20from%20Signal%20Hill.jpg");
-    background-size: 100%, 100%;
-    
+    position: fixed;
+    background-image: url("http://1079638729.rsc.cdn77.org/pic/v2/gallery/preview/anime-derevya-pejzazh-26708.jpg");
+    background-size: 1522px 1522px;
+}
+
+
+#diaSprite{
+    height:1250px; 
+    width: 850px;
+    margin-left:350px;
+    margin-top:-1180px;
+    z-index: -1;
+}
+#akaSprite
+{
+    height:1200px; 
+    width: 850px;
+    margin-left:-375px;
+    margin-top:250px;
+    z-index: -1;
 }

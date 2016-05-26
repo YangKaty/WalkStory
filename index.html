@@ -11,18 +11,24 @@
     </head>
     <body>
     
-            <div id="background">
-       <div id="accel">
-          </div> 
-        <div id="steps">   
-       </div>
+<audio autoplay="autoplay">
+     <source src="Henesys Music.mp3" />     
+ </audio>
+         <div id="background">
+  
         <div class="cover">
             <div class="jumbotron">
-              <h2 id="title">Walk Story</h2>
-            </div>
-            <div type=button>restart</div>
+              <h2 id="title">A Hero's Quest</h2>
+            </div>     
+                  <div id="accel"> </div> 
+      <!--    <div id="steps">  
+       </div> -->
+       <div class="partOne">
             <div class="contain">
-                <div id="dia">
+                <div id="dialog">
+                    **You heard about a place where monsters gathered from a passing adventurer and went to fight them the very next day.
+                    **It was a bit tough, but nothing you couldn't handle.
+                    
                 </div>
                 <!-- 
                 <button id="next">
@@ -30,12 +36,15 @@
                 </button> 
                 -->
             </div>
-            <div id="box-frame">
-                Box # 1
-             </div>
+            <audio id="sword" src="Swoosh_SFX.mp3"></audio>
+            <div id="box-frame">  <div id="steps"> </div> </div>
+            <div id="box-frame-2"type=button onclick="buttonRestart()">restart</div>
+            <div id="picture-frame">
+                <img id ="akaSprite" src="sprite_smile.png"></img>
+                  </div>
             
-             <div id="box-frame-2">
-                Box # 2
+             <div id="picture-frame-2">
+                 <img id="diaSprite" src="diaSprite.png"></img>
              </div>
             <!-- 
             <form>
@@ -48,10 +57,15 @@
             <button id="login" id="idbutton">Log In</button>
         </div> 
         -->
-        </div>
-        </div>
+            </div>
+            </div>
+        </div>    
         
-        
+        <div class= "partTwo"> <!--part 2 starts here-->
+            
+            
+        </div>
+    
         
     </body>
 </html>

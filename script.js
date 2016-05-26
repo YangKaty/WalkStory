@@ -11,28 +11,63 @@ function handleMotionEvent(event) {
     }
     lastZ = z;
     $("#accel").text(z);    
-    $("#steps").text(steps);
+    $("#steps").text(steps+" times");
 }
+function buttonRestart(){
+steps = 0;    
+alert("You have reset the counter.");
+}
+
+
+
+
+//if(steps % 3)
+//{
+// swooshSFX.play();
+//}
 window.addEventListener('devicemotion', handleMotionEvent, true);
 
-$(document).ready(function(){
-    var dialogs = ["i HATE YOU",
-                    "BUT I LOVE YOU",
-                    "BUT I HATE YOU",
-                    "AND I LOVE YOU",
-                    "BAKA",
-        ];
+
+$(document).ready( function(){
+    
+   var dialogs = [ 
+                    "**You're just about done when you hear two people's voices.",
+                    "??? : That was great! Don't you think? ",
+                    "??? : It could have been better...",
+                    "??? : Well you're not WRONG... Still, it wasn't THAT bad.",
+                    "You : ...I'm right here , you know!",
+                    "??? & ??? : We know.",
+                    "**They walk up to you.",
+                    "??? : Oh, you left one.",
+                    "You : What do you mean?",
+                    "**You turned around, and a slime who was still alive suddenly jumps onto your face and begins to suffocate you!!",
+                    "You : WHAt THE- BLUGBH BLUGHB--",
+                    "!! !! !!",
+                    "\< Slash around with your device as if it were a sword! \>"
+                    ];
+            
     var currentDialog = 0;
+        $("#akaSprite").hide();
+        $("#diaSprite").hide();
     $(".contain").click(function(){
-        $("#dia").empty();
+        $("#akaSprite").show();
+        $("#diaSprite").show();
+        $("#dialog").empty();
         if(currentDialog == dialogs.length){
-            $("#dia").append("End");
+            $("#dialog").append("...");
+            $("#akaSprite").hide();
+            $("#diaSprite").hide();
         } else {
-            $("#dia").append(dialogs[currentDialog]);
+            $("#dialog").append(dialogs[currentDialog]);
             currentDialog++;
         }
+            $('#sword')[0].play();
+            
+        if (steps == 10){
+            $("#dialog").append("done");
+            
+        }
         
-    })
+    });
     
-    
-})
+});
